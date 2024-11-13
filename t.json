@@ -1,0 +1,46 @@
+{
+    "product": [
+      {
+        "id": "128",
+        "title": "Моторное масло Helix Ultra 550046361",
+        "cost": 2120,
+        "description": null,
+        "main_image_path": "/images/F310E078.jpg",
+        "is_active": true,
+        "manufacturer": 103
+      },
+      {
+        "id": "129",
+        "title": "Моторное масло Super 3000 X1 152566",
+        "cost": 1820,
+        "description": null,
+        "main_image_path": "\\images\\6CA0BE73.jpg",
+        "is_active": true,
+        "manufacturer": 104
+      },
+      {
+        "id": "133",
+        "title": "Моторное масло Top Tec 4600 8033",
+        "cost": 2580,
+        "description": null,
+        "main_image_path": "\\images\\B790A6AA.jpg",
+        "is_active": false,
+        "manufacturer": 105
+      }],
+    "manufacturer": [
+    {
+      "id": "103",
+      "name": "Profix",
+      "startdate": "2017-10-02"
+    },
+    {
+      "id": "104",
+      "name": "Pierburg",
+      "startdate": "2017-01-10"
+    },
+    {
+      "id": "105",
+      "name": "Honda",
+      "startdate": "2016-06-12"
+    }]
+}

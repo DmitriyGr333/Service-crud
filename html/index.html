@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доеду сам!</title>
+    <link rel="icon" href="../resourse/logo.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="add-button-container">
+        <button class="button" id="addNewProductButton">Добавить товар</button>
+    </div>    
+
+    <div class="form-container" id="add-form-id">
+        <form class="add-products-form">
+            <h3>Добавление</h3>
+            <div class="add-form">
+                <input class="input" type="text" id="title" placeholder="введите наименование..."/><br>
+                <input class="input" type="text" id="main_image_path" placeholder="введите путь до фото..."/><br>
+                <textarea class="input" id="description" placeholder="введите описание..."></textarea><br>
+                <input class="input" type="number" id="cost" placeholder="введите стоимость..."/><br>
+                <div class="combobox-form">
+                    <select class="select-manufacturer" name="combobox" id="manufacturer">
+                        <option value="sel">-- Выберите производителя --</option>
+
+                    </select>                
+                </div>
+                <div class="check-form">
+                    <input class="check" type="checkbox" id="isActive"/>
+                    <label for="isActive">Активен</label>
+                </div>
+            </div>    
+            <div class="button-container">
+                <button class="button" id="addButton" onclick="addClick()">Сохранить</button>
+                <button class="button" id="cancelButton">Отмена</button>
+            </div>    
+        </form>
+    </div>
+
+    <div class="edit-form-container" id="edit-form-id">
+        <form class="add-products-form">
+            <h3>Редактирование</h3>
+            <div class="add-form">
+                <div class="form-id">
+                    <label class="article-id" id="article">Артикул: </label>
+                    <label class="product-id" id="edit-productId"></label>
+                </div>
+                <input class="input" type="text" id="edit-title" placeholder="введите наименование..."/><br>
+                <input class="input" type="text" id="edit-main_image_path" placeholder="введите путь до фото..."/><br>
+                <textarea class="input" id="edit-description" placeholder="введите описание..."></textarea><br>
+                <input class="input" type="number" id="edit-cost" placeholder="введите стоимость..."/><br>
+                <div class="combobox-form">
+                    <select class="select-manufacturer" name="combobox" id="edit-manufacturer">
+                        <option value="sel">-- Выберите производителя --</option>
+
+                    </select>                
+                </div>
+                <div class="check-form">
+                    <input class="check" type="checkbox" id="edit-isActive"/>
+                    <label for="isActive">Активен</label>
+                </div>
+            </div>    
+            <div class="button-container">
+                <button class="button" id="editButton" onclick="editClick()">Изменить</button>
+                <button class="button" id="cancelButton">Отмена</button>
+            </div>    
+        </form>
+    </div>
+
+    <form class="products-form" id="product-form">
+        <div class="form-filtr">
+            <label for="manufacturerFilter">Фильтр по производителю:</label>
+            <select class="manufacturer-filter" id="manufacturerFilter">
+                <option value="">-- Все производители --</option> 
+            </select>
+            <div class="search-form">
+                <label for="searchInput">Поиск:</label>
+                <input type="text" id="searchInput" placeholder="поиск..."/>
+            </div>
+            <div class="form-sort">
+                <label for="sortSelect">Цена:</label>
+                <select class="sort-select" id="sortSelect">
+                    <option value="asc">По возрастанию цены</option>
+                    <option value="desc">По убыванию цены</option>
+                </select>
+            </div>
+        </div>
+        <div class="products-list" id="productsListBox">
+            
+        </div>    
+    </form>
+
+    <button id="scrollTopBtn" class="scroll-top-button">⬆</button>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
